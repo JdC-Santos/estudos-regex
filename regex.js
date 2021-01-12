@@ -4,8 +4,11 @@ function Regex() {
     cnpj: /(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
     telefone10: /(\d{2})(\d{4})(\d{4})/,
     telefone11: /(\d{2})(\d{5})(\d{4})/,
-    apenasLetras: /\W/g,
-    apenasNumeros: /\D/g
+    apenasLetras:/[a-zA-Z]/g,
+    apenasAlfaNumericos: /\w/g,
+    naoAlfaNumericos: /\W/g,
+    apenasNumeros: /\d/g,
+    naoNumericos:/\D/g
   };
 }
 
@@ -26,10 +29,10 @@ Regex.prototype = {
     
   },
   apenasNumeros: function(string) {
-    return string.replace(this.patterns.apenasNumeros,'');
+    return string.replace(this.patterns.naoNumericos,'');
   },
   apenasLetras: function(string) {
-    return string.replace(this.patterns.apenasLetras,'');
+    return string.replace(this.patterns.naoAlfaNumericos,'');
   }
 }
 

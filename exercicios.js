@@ -7,6 +7,7 @@ console.log("Formatando CNPJ: " + patterns.cnpj(fields.cnpj) );
 console.log("Formatando TELEFONE: " + patterns.telefone(fields.telefone) );
 console.log("Formatando CELULAR: " + patterns.telefone(fields.celular) );
 console.log("APENAS NUMEROS: " + patterns.apenasNumeros(fields.texto) );
+console.log("APENAS LETRAS E NUMEROS: " + patterns.apenasLetras(fields.texto) );
 console.log("APENAS LETRAS: " + patterns.apenasLetras(fields.texto) );
 
 // separando em um array onde tiver espaco em branco
